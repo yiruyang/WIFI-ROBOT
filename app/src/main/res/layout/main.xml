@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/haveSignal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <!--<ImageView-->
+            <!--android:id="@+id/main_behind"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="@drawable/gifbackground"/>-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/main_before"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="@drawable/gifrobot" />-->
+
+        <com.dsrobot.MjpegView
+            android:id="@+id/view3D"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"/>
+
+        <ImageButton
+            android:id="@+id/maintosetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_setting_nomal_action"
+            android:layout_marginLeft="17dp"/>
+
+        <ImageButton
+            android:id="@+id/maintologin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/maintosetting"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="17dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_login_nomal_action"/>
+        <Switch
+            android:id="@+id/purifier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:switchMinWidth="20dp"
+            android:thumb="@drawable/thumb"
+            android:track="@drawable/track" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="17dp"
+            android:layout_marginTop="20dp"
+            >
+
+            <com.dsrobot.BatteryView
+                android:id="@+id/charged_battery"
+                android:layout_width="30dp"
+                android:layout_marginBottom="30dp"
+                android:layout_height="14dp"
+                android:layout_marginTop="5dp"
+                android:background="#fff"
+                android:gravity="center"
+                app:batteryPower="70"
+                app:batteryColor="@android:color/black"
+                app:batteryOrientation="horizontal"
+                />
+            <com.dsrobot.BatteryView
+                android:id="@+id/charging_battery"
+                android:layout_width="30dp"
+                android:layout_marginBottom="30dp"
+                android:layout_height="14dp"
+                android:layout_marginTop="5dp"
+                android:background="#fff"
+                android:gravity="center"
+                app:batteryPower="70"
+                app:batteryColor="@android:color/black"
+                app:batteryOrientation="horizontal"
+                />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/control"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="26dp"
+            android:padding="5dp">
+
+            <com.dsrobot.NavController
+                android:id="@+id/control_view"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/corona" />
+
+        </RelativeLayout>
+
+
+
+        <ImageButton
+            android:id="@+id/radar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/all_off"
+            />
+
+        <CheckBox
+            android:id="@+id/speed"
+            android:layout_width="155dp"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="26dp"
+            android:background="@drawable/checkbox_style"
+            android:button="@null" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

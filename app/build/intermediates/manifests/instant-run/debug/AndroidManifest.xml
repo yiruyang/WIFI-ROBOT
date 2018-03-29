@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dsrobot"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="7" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+//调用闪关灯
+    <uses-permission android:name="android.permission.CAMERA" />
+//调用相机
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 获取WIFI信息状态的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 获取网络状态改变的权限 -->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <application
+        android:name="com.dsrobot.utils.MyApplication"
+        android:debuggable="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:testOnly="true"
+        android:theme="@style/Base.AppTheme" >
+        <activity
+            android:name="com.dsrobot.MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.dsrobot.SplashActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/SplashTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.dsrobot.Config" />
+        <activity
+            android:name="com.dsrobot.LoginAcivity"
+            android:launchMode="singleTop" />
+        <activity android:name="com.dsrobot.CaptureActivity" />
+        <activity android:name="com.dsrobot.NoSignalActivity" />
+
+        <meta-data
+            android:name="android.support.VERSION"
+            android:value="26.1.0" />
+        <meta-data
+            android:name="android.arch.lifecycle.VERSION"
+            android:value="27.0.0-SNAPSHOT" />
+
+        <provider
+            android:name="com.android.tools.ir.server.InstantRunContentProvider"
+            android:authorities="com.dsrobot.com.android.tools.ir.server.InstantRunContentProvider"
+            android:multiprocess="true" />
+    </application>
+
+</manifest>

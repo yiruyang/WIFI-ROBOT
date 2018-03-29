@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="InnerColor" format="color"/>
+    <attr name="OuterColor" format="color"/>
+    <declare-styleable name="NavController">
+        <attr name="InnerColor"/>
+        <attr name="OuterColor"/>
+    </declare-styleable>
+
+    <declare-styleable name="Battery">
+        <attr name="batteryOrientation">
+            <enum name="horizontal" value="0"/>
+            <enum name="vertical" value="1"/>
+        </attr>
+        <attr name="batteryColor" format="color"/>
+        <attr name="batteryPower" format="integer"/>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">大帅机器人工作室http://dsrobot.taobao.com</string>
+    <string name="app_name">WIFI-Robot</string>
+    <color name="begin">#0000</color>
+    <color name="main_bg">#000</color>
+
+    <color name="common_content_bg_white">#ffffff</color>
+    <color name="dark_grey">#a19c9c</color>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- 欢迎页背景引用刚才写好的 -->
+        <item name="android:screenOrientation">landscape</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@drawable/welcome</item>
+    </style>
+
+    <style name="Base.AppTheme" parent="Theme.AppCompat.Light.DarkActionBar" type="text/css">
+        <item name="colorPrimary">#673AB7</item>
+        <item name="colorPrimaryDark">#512DA8</item>
+        <item name="colorAccent">#FF4081</item>
+    </style>
+
+    <string name="namepassword_null">用户名和密码不能为空</string>
+    <string name="namepassword_incorrect">用户名密码不正确</string>
+
+    <string name="btn_open_flashlight_text">打开手电筒</string>
+    <string name="btn_close_flashlight_text">关闭手电筒</string>
+    <string name="btn_scan_local_pic">从相册选取二维码</string>
+
+    <string name="scan_fail">扫描失败!</string>
+</resources>

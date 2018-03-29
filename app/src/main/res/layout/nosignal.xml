@@ -1,0 +1,88 @@
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/noSignal"
+    android:background="@drawable/gifbackground">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/maintosetting_nosignal"
+            android:layout_width="19dp"
+            android:layout_height="21dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/setting_nosignal" />
+
+        <ImageButton
+            android:id="@+id/maintologin_nosignal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="17dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/maintologin"/>
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_before_main"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/gifrobot"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="14dp">
+
+        <ImageView
+            android:id="@+id/pleasecheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/checkinternet"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <ImageView
+            android:id="@+id/pleasecheck1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/round"
+            android:layout_toRightOf="@id/pleasecheck"
+            android:layout_marginLeft="4dp"
+            android:layout_centerVertical="true"
+            />
+
+        <ImageView
+            android:id="@+id/pleasecheck2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/roundfirst"
+            android:layout_toRightOf="@id/pleasecheck1"
+            android:layout_marginLeft="4dp"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:id="@+id/pleasecheck3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/roundsecond"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@id/pleasecheck2"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
