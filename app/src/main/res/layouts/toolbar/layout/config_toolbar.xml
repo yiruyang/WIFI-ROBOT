@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?attr/actionBarSize"
+    android:focusableInTouchMode="true"
+    android:fitsSystemWindows="true"
+    android:background="@color/settingColor">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/setting_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="返回"
+            android:textSize="17sp"
+            android:gravity="center_vertical"
+            android:textColor="#fff"
+            android:drawablePadding="6dp"
+            android:drawableLeft="@drawable/ic_back"
+            android:background="@drawable/layout_back"
+            android:layout_centerVertical="true"
+            />
+
+        <ImageButton
+            android:id="@+id/qr_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="19dp"
+            android:background="@drawable/button_setting_nomal_action"/>
+
+    </RelativeLayout>
+</android.support.v7.widget.Toolbar>

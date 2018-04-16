@@ -178,7 +178,7 @@ public class MjpegView extends SurfaceView implements SurfaceHolder.Callback {
             overlayTextColor = Color.WHITE;
             overlayBackgroundColor = Color.BLACK;
             ovlPos = MjpegView.POSITION_LOWER_RIGHT;
-            displayMode = MjpegView.SIZE_STANDARD;
+            displayMode = MjpegView.SIZE_FULLSCREEN;
             dispWidth = getWidth();
             dispHeight = getHeight();
 

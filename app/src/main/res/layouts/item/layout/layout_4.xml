@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/mid_measure"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="47dp"
+        android:layout_marginRight="27dp"
+        android:layout_toLeftOf="@id/mid_measure">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="@string/please_import"/>
+
+        <EditText
+            android:id="@+id/room_bulk"
+            android:layout_width="125dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="9dp"
+            android:numeric="integer"
+            android:singleLine="true"
+            android:background="@drawable/layout_textview"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="13dp"
+            android:textSize="8sp"
+            android:text="@string/marked_words_before"
+            android:textColor="#7c7c7c"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:textSize="8sp"
+            android:text="@string/marked_words_after"
+            android:textColor="#7c7c7c"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="71dp"
+        android:orientation="vertical"
+        android:layout_toRightOf="@id/mid_measure"
+        android:layout_marginLeft="36dp">
+
+        <Button
+            android:id="@+id/start_sterilize"
+            android:layout_width="125dp"
+            android:layout_height="23dp"
+            android:text="开始消毒"
+            android:textColor="#fff"
+            android:layout_marginRight="19dp"
+            android:background="@drawable/xiaodu_button"/>
+
+        <Button
+            android:id="@+id/finish_sterilize"
+            android:layout_width="125dp"
+            android:layout_height="23dp"
+            android:text="停止消毒"
+            android:textColor="#fff"
+            android:layout_marginRight="19dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/xiaodu_button"/>
+    </LinearLayout>
+
+</RelativeLayout>

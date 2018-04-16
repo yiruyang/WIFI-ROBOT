@@ -9,21 +9,33 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.CheckBox;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.dsrobot.utils.BaseActivity;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class Config extends BaseActivity{
 
-	private EditText txt_VideoUrl = null;
-	private EditText txt_ControlUrl = null;
-	private EditText txt_port = null;
-	private ImageButton setting_back;
-	private ImageButton btn_SaveButton = null;
-	private ImageButton qr_code;
-	private CheckBox cbx_DisplayMode = null;
+	@BindView(R.id.VideoUrl)
+	EditText txt_VideoUrl;
+	@BindView(R.id.ControlUrl)
+	EditText txt_ControlUrl;
+	@BindView(R.id.port)
+	EditText txt_port;
+	@BindView(R.id.setting_back)
+	TextView setting_back;
+	@BindView(R.id.SaveButton_Control)
+	Button btn_SaveButton;
+	@BindView(R.id.qr_code)
+	ImageButton qr_code;
+	@BindView(R.id.setting_to_login)
+	TextView setting_to_login;
+
 	public static final String PREFS_NAME = "WIFI-Robot";
 	
 	@Override
@@ -31,25 +43,24 @@ public class Config extends BaseActivity{
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-				WindowManager.LayoutParams.FLAG_FULLSCREEN);
+		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON,
 				WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 		setContentView(R.layout.main);
 		setContentView(R.layout.config);
-		
 
-		txt_VideoUrl = (EditText)findViewById(R.id.VideoUrl);
-		txt_ControlUrl = (EditText)findViewById(R.id.ControlUrl);
-		txt_port = (EditText)findViewById(R.id.port);
-		btn_SaveButton = findViewById(R.id.SaveButton_Control);
-		setting_back = findViewById(R.id.setting_back);
-		txt_VideoUrl = findViewById(R.id.VideoUrl);
-		txt_ControlUrl = findViewById(R.id.ControlUrl);
-		txt_port = findViewById(R.id.port);
-		qr_code = findViewById(R.id.qr_code);
+		ButterKnife.bind(this);
+
 		onShow();
+
+		//退出登录
+		setting_to_login.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(Config.this, LoginAcivity.class));
+				removeActivity();
+			}
+		});
 
 		/**
 		 * 保存事件
@@ -62,7 +73,6 @@ public class Config extends BaseActivity{
 				Intent intent = new Intent();
 				intent.setClass(Config.this, MainActivity.class);
 				startActivity(intent);
-				btn_SaveButton.setClickable(false);
 				removeActivity();
 			}
 		});
@@ -75,19 +85,6 @@ public class Config extends BaseActivity{
 				startActivityForResult(new Intent(Config.this, CaptureActivity.class), 0);
 			}
 		});
-//		btn_SaveButton.setOnTouchListener(new OnTouchListener() {
-//
-//			@Override
-//			public boolean onTouch(View v, MotionEvent event) {
-//				// TODO Auto-generated method stub
-//				switch (event.getAction()) {
-//				case MotionEvent.ACTION_DOWN:
-//
-//					break;
-//				}
-//				return false;
-//			}
-//		});
 
 		setting_back.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -165,6 +162,7 @@ public class Config extends BaseActivity{
 			txt_VideoUrl.setText(videoUrl);
 			txt_ControlUrl.setText(controlUrl);
 			txt_port.setText(port);
+			show_Toast("数据已生成！");
 		}
 	}
 }

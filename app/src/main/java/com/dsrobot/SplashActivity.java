@@ -12,9 +12,15 @@ import android.widget.ImageView;
 
 import com.dsrobot.utils.BaseActivity;
 
+import butterknife.BindView;
+
 public class SplashActivity extends BaseActivity {
+
     private static final String TAG = "MainActivity";
-    ImageView iv_behind, iv_before;
+    @BindView(R.id.iv_before)
+    ImageView iv_before;
+    @BindView(R.id.iv_behind)
+    ImageView iv_behind;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

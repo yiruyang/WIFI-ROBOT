@@ -30,22 +30,24 @@
         android:theme="@style/Base.AppTheme" >
         <activity
             android:name="com.dsrobot.MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
             android:name="com.dsrobot.SplashActivity"
             android:screenOrientation="landscape"
             android:theme="@style/SplashTheme" >
+        </activity>
+        <activity android:name="com.dsrobot.Config" />
+        <activity
+            android:name="com.dsrobot.LoginAcivity"
+            android:launchMode="singleTop" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.dsrobot.Config" />
-        <activity
-            android:name="com.dsrobot.LoginAcivity"
-            android:launchMode="singleTop" />
         <activity android:name="com.dsrobot.CaptureActivity" />
         <activity android:name="com.dsrobot.NoSignalActivity" />
 

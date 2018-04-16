@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff">
+
+    <include layout="@layout/toolbar"/>
+    <RelativeLayout
+        android:id="@+id/haveSignal"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <com.dsrobot.MjpegView
+            android:id="@+id/view3D"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:id="@+id/top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="14dp">
+
+            <ImageButton
+                android:id="@+id/windy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/windy"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="湿度:"
+                android:textColor="#fff"/>
+
+            <TextView
+                android:id="@+id/humidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="50dp"
+            >
+            <ImageView
+                android:id="@+id/hot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/hot"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="温度:"
+                android:textColor="#fff"/>
+
+            <TextView
+                android:id="@+id/temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"/>
+
+        </LinearLayout>
+
+
+        <com.dsrobot.BatteryView
+            android:id="@+id/charged_battery"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="30dp"
+            android:layout_height="14dp"
+            android:background="#fff"
+            android:gravity="center"
+            app:batteryPower="70"
+            app:batteryColor="@android:color/black"
+            app:batteryOrientation="horizontal"
+            />
+        <com.dsrobot.BatteryView
+            android:id="@+id/charging_battery"
+            android:layout_width="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_height="14dp"
+            android:background="#fff"
+            android:gravity="center"
+            app:batteryPower="70"
+            app:batteryColor="@android:color/black"
+            app:batteryOrientation="horizontal"
+            />
+
+
+        <ImageButton
+            android:id="@+id/radar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/all_off"
+            />
+
+        <Switch
+            android:id="@+id/purifier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="off"
+            android:textOn="on"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="11dp"
+            android:layout_marginRight="19dp"
+            android:thumb="@drawable/thumb"
+            android:track="@drawable/track" />
+    </RelativeLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2196f3"
+        app:tabIndicatorHeight="0dp"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="#FF4081">
+
+    </android.support.design.widget.TabLayout>
+
+
+    <com.dsrobot.utils.NoScrollViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.dsrobot.utils.NoScrollViewPager>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

@@ -49,7 +49,6 @@ public class MjpegInputStream extends DataInputStream {
     public static MjpegInputStream getInstance() {
         if (mis != null)
             return mis;
-
         return null;
     }
 

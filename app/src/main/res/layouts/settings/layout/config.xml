@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    >
+	<include layout="@layout/config_toolbar"/>
+
+
+	<EditText
+		android:id="@+id/VideoUrl"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:hint="视频地址"
+		android:textSize="25dp"
+		android:layout_marginLeft="19dp"
+		android:layout_marginTop="22dp"
+		android:background="@null"/>
+	<ImageView
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:layout_marginTop="12dp"
+		android:background="#dfdfdf"
+		android:layout_marginLeft="19dp"
+		android:layout_marginRight="19dp"/>
+
+	<EditText
+		android:id="@+id/ControlUrl"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:hint="控制地址"
+		android:textSize="25dp"
+		android:layout_marginLeft="19dp"
+		android:layout_marginTop="22dp"
+		android:background="@null"/>
+	<ImageView
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:layout_marginTop="12dp"
+		android:background="#dfdfdf"
+		android:layout_marginLeft="19dp"
+		android:layout_marginRight="19dp"/>
+
+	<EditText
+		android:id="@+id/port"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:hint="端口"
+		android:textSize="25dp"
+		android:layout_marginLeft="19dp"
+		android:layout_marginTop="22dp"
+		android:background="@null"/>
+	<ImageView
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:layout_marginTop="12dp"
+		android:background="#dfdfdf"
+		android:layout_marginLeft="19dp"
+		android:layout_marginRight="19dp"/>
+
+	<Button
+		android:id="@+id/SaveButton_Control"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text = "保存"
+		android:layout_gravity="center_horizontal"
+		android:textSize="18sp"
+		android:textColor="#fff"
+		android:layout_marginTop="233dp"
+		android:background="@drawable/save_bg"
+		android:stateListAnimator="@drawable/state_list_animator_z"
+		/>
+
+	<TextView
+		android:id="@+id/setting_to_login"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textColor="#009cf6"
+		android:layout_marginTop="21dp"
+		android:text="退出登录"
+		android:textSize="9sp"
+		android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>
